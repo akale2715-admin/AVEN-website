@@ -3,83 +3,86 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0a0a0a">
-  <meta name="description" content="AVEN creates custom apparel and merchandise for colleges, events, teams and businesses. Custom T-shirts, hoodies, polos, jerseys and more.">
-  <title>AVEN — Custom Apparel & Merchandise</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
-    :root{--black:#090909;--white:#f5f5f2;--muted:#a4a4a0;--line:rgba(255,255,255,.16);--panel:#121212;--serif:Georgia,serif}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--black);color:var(--white);font-family:'DM Sans',sans-serif}a{color:inherit;text-decoration:none}button{font:inherit}
-    .wrap{width:min(1180px,calc(100% - 48px));margin:auto}.topbar{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
-    .wordmark{font-family:'Manrope',sans-serif;font-size:29px;font-weight:800;letter-spacing:.22em;line-height:1}.wordmark small{display:block;font:500 8px 'DM Sans',sans-serif;letter-spacing:.28em;margin-top:7px;color:#bdbdb8}
-    nav{display:flex;gap:32px;align-items:center;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#d0d0cc}nav a:hover,.footer-links a:hover{color:white}
-    .nav-cta,.button{border:1px solid #f5f5f2;padding:13px 19px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;display:inline-flex;align-items:center;justify-content:center;transition:.2s}
-    .nav-cta:hover,.button.primary{background:var(--white);color:var(--black)}.button:hover{background:var(--white);color:var(--black)}
-    .hero{min-height:670px;display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:55px;padding:80px 0}
-    .eyebrow{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:#aaa;margin:0 0 26px}.hero h1{font:600 clamp(56px,8vw,104px)/.98 'Manrope',sans-serif;letter-spacing:-.075em;margin:0;max-width:690px}.hero h1 span{color:#858580}
-    .hero-copy{font-size:16px;line-height:1.8;color:#bdbdb8;max-width:470px;margin:30px 0 32px}.actions{display:flex;gap:12px;flex-wrap:wrap}.hero-art{height:480px;border:1px solid var(--line);position:relative;overflow:hidden;background:radial-gradient(ellipse at 52% 44%,#292929 0,#151515 40%,#0b0b0b 75%)}
-    .hero-art:before{content:"";position:absolute;width:360px;height:360px;border:1px solid #666;border-radius:50%;left:50%;top:48%;transform:translate(-50%,-50%);opacity:.3}.hero-art:after{content:"";position:absolute;width:260px;height:260px;border:1px solid #777;border-radius:50%;left:50%;top:48%;transform:translate(-50%,-50%);opacity:.25}
-    .art-word{position:absolute;z-index:1;left:50%;top:47%;transform:translate(-50%,-50%);font:800 clamp(55px,7vw,90px) 'Manrope',sans-serif;letter-spacing:.18em;padding-left:.18em}.art-caption{position:absolute;bottom:22px;left:24px;right:24px;display:flex;justify-content:space-between;color:#aaa;font-size:9px;letter-spacing:.18em;text-transform:uppercase}
-    .ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0;overflow:hidden;white-space:nowrap;color:#b8b8b3;font-size:10px;letter-spacing:.25em;text-transform:uppercase}.ticker span{padding:0 30px}.ticker b{color:white;font-weight:500}
-    section{padding:110px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:45px}.section-head h2{font:600 clamp(38px,5vw,60px)/1 'Manrope',sans-serif;letter-spacing:-.06em;margin:0}.section-head p{color:var(--muted);max-width:350px;line-height:1.7;font-size:13px;margin:0}
-    .products{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.product{min-height:300px;border:1px solid var(--line);padding:26px;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(145deg,#171717,#0d0d0d);transition:.25s}.product:hover{border-color:#777;transform:translateY(-4px)}.product .num{font-size:10px;color:#858580;letter-spacing:.2em}.product h3{font:600 26px 'Manrope',sans-serif;letter-spacing:-.04em;margin:0 0 8px}.product p{font-size:12px;color:#aaa;line-height:1.7;margin:0;max-width:270px}.product .arrow{align-self:flex-end;font-size:23px;color:#aaa}
-    .statement{background:var(--white);color:var(--black);padding:100px 0}.statement .eyebrow{color:#666}.statement h2{font:600 clamp(42px,7vw,82px)/1.04 'Manrope',sans-serif;letter-spacing:-.07em;max-width:920px;margin:0}.statement p{max-width:560px;color:#555;line-height:1.8;font-size:14px;margin:28px 0 0}
-    .services{display:grid;grid-template-columns:1fr 1fr;gap:70px}.service-list{border-top:1px solid var(--line)}.service-row{padding:20px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;font-size:14px}.service-row span:last-child{color:#888}
-    .process{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{border-top:1px solid #777;padding-top:20px}.step b{font-size:10px;color:#888;letter-spacing:.18em}.step h3{font:600 19px 'Manrope',sans-serif;margin:28px 0 10px}.step p{font-size:12px;line-height:1.7;color:#aaa;margin:0}
-    .contact{background:#111;border:1px solid var(--line);padding:clamp(30px,6vw,72px);display:grid;grid-template-columns:1fr auto;align-items:end;gap:30px}.contact h2{font:600 clamp(42px,6vw,72px)/1 'Manrope',sans-serif;letter-spacing:-.07em;margin:0;max-width:650px}.contact p{color:#aaa;font-size:13px;line-height:1.7;max-width:420px}
-    footer{padding:35px 0 28px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:24px;align-items:center;color:#888;font-size:10px;letter-spacing:.08em}.footer-links{display:flex;gap:22px}
-    @media(max-width:800px){nav{gap:16px}.hero{grid-template-columns:1fr;padding:70px 0;gap:38px}.hero-art{height:360px}.products{grid-template-columns:1fr 1fr}.services{grid-template-columns:1fr;gap:35px}.process{grid-template-columns:1fr 1fr}.contact{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}}
-    @media(max-width:540px){.wrap{width:min(100% - 34px,1180px)}.topbar{height:72px}.wordmark{font-size:24px}nav a:not(.nav-cta){display:none}.nav-cta{padding:11px 13px}.hero{min-height:auto}.hero h1{font-size:58px}.hero-art{height:300px}.products{grid-template-columns:1fr}.product{min-height:240px}section{padding:78px 0}.statement{padding:78px 0}.process{grid-template-columns:1fr 1fr}.contact{padding:28px 22px}footer{align-items:flex-start;flex-direction:column}.footer-links{flex-wrap:wrap}}
-  </style>
+  <meta name="theme-color" content="#111111">
+  <meta name="description" content="AVEN makes custom apparel and merchandise for colleges, events, teams and businesses. Made to order in India.">
+  <title>AVEN — Made for your people</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="wrap topbar">
-    <a class="wordmark" href="#" aria-label="AVEN home">AVEN<small>CUSTOM APPAREL & MERCHANDISE</small></a>
-    <nav aria-label="Main navigation"><a href="#products">Products</a><a href="#services">What we do</a><a href="#process">Process</a><a class="nav-cta" href="#contact">Enquire ↗</a></nav>
+  <div class="announcement"><span>AVEN / CUSTOM APPAREL & MERCHANDISE</span><span>MADE TO ORDER · INDIA <i>↗</i></span></div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="AVEN home"><span>AVEN</span><small>APPAREL & OBJECTS</small></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <nav class="main-nav">
+      <a href="#collections">Collections</a><a href="#studio">The studio</a><a href="#process">How it works</a>
+      <a class="nav-contact" href="#enquire">Start an order <span>↗</span></a>
+    </nav>
   </header>
   <main>
-    <div class="wrap hero">
-      <div>
-        <p class="eyebrow">Independent custom merchandise studio</p>
-        <h1>Wear your<br><span>identity.</span></h1>
-        <p class="hero-copy">Custom apparel and merchandise made for teams, communities, campuses and businesses. Thoughtful details. Your identity. Made to order.</p>
-        <div class="actions"><a class="button primary" href="#contact">Start a project ↗</a><a class="button" href="#products">Explore products</a></div>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="kicker"><span class="dot"></span> INDEPENDENT MERCHANDISE STUDIO <span class="rule"></span> 01—26</p>
+        <h1>Made for<br>the <em>ones</em><br>who make it<br><span>happen.</span></h1>
+        <div class="hero-bottom"><p>Custom apparel for teams, campuses, events and businesses. Your people, your mark, made tangible.</p><a class="round-link" href="#collections" aria-label="Explore collections">↓</a></div>
       </div>
-      <div class="hero-art" aria-label="Minimal monochrome AVEN brand artwork"><div class="art-word">AVEN</div><div class="art-caption"><span>Designed around you</span><span>01 / Custom made</span></div></div>
-    </div>
-    <div class="ticker"><span><b>APPAREL</b> — MERCHANDISE</span>✳<span><b>COLLEGE</b> — EVENTS</span>✳<span><b>TEAMS</b> — BUSINESSES</span>✳<span><b>MADE TO ORDER</b> — MADE WITH INTENT</span></div>
-    <section id="products" class="wrap">
-      <div class="section-head"><div><p class="eyebrow">01 / The collection</p><h2>Made to be<br>your own.</h2></div><p>Choose your base. Make it yours with custom artwork, colours, prints and finishing details.</p></div>
-      <div class="products">
-        <article class="product"><span class="num">01 — EVERYDAY</span><div><h3>T-shirts</h3><p>Classic, oversized and custom printed tees for groups, teams and everyday identity.</p></div><span class="arrow">↗</span></article>
-        <article class="product"><span class="num">02 — PREMIUM</span><div><h3>Hoodies & sweatshirts</h3><p>Custom fleece and heavyweight styles with considered print and branding options.</p></div><span class="arrow">↗</span></article>
-        <article class="product"><span class="num">03 — ESSENTIALS</span><div><h3>Polos & uniforms</h3><p>Polished apparel for staff, clubs, college teams and business communities.</p></div><span class="arrow">↗</span></article>
-        <article class="product"><span class="num">04 — TEAMWEAR</span><div><h3>Jerseys & sportswear</h3><p>Custom team apparel that brings your people together on and off the field.</p></div><span class="arrow">↗</span></article>
-        <article class="product"><span class="num">05 — ACCESSORIES</span><div><h3>Caps & carry goods</h3><p>Caps, tote bags and useful accessories finished with your identity.</p></div><span class="arrow">↗</span></article>
-        <article class="product"><span class="num">06 — MORE TO MAKE</span><div><h3>Custom merchandise</h3><p>Bottles, mugs, lanyards, notebooks and curated merchandise for your next brief.</p></div><span class="arrow">↗</span></article>
+      <div class="hero-visual">
+        <div class="visual-top"><span>FIG. 01</span><span>THE CUSTOM ISSUE</span></div>
+        <div class="garment-stage">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="tee"><div class="tee-sleeve left"></div><div class="tee-sleeve right"></div><div class="tee-neck"></div><span>AVEN</span></div>
+          <div class="stage-stamp">YOUR<br>IDENTITY<br><b>ON REPEAT.</b></div>
+        </div>
+        <div class="visual-bottom"><span>01 / THE EVERYDAY TEE</span><span>DESIGNED AROUND YOU ↗</span></div>
       </div>
+      <div class="hero-index">A / 001</div>
     </section>
-    <div class="statement"><div class="wrap"><p class="eyebrow">02 / The AVEN approach</p><h2>Not just merch.<br>A mark of belonging.</h2><p>We bring your idea into the real world through custom apparel and merchandise. From a college fest to a growing business, every order starts with your purpose and your people.</p></div></div>
-    <section id="services" class="wrap">
-      <div class="section-head"><div><p class="eyebrow">03 / Who we work with</p><h2>Made for<br>your people.</h2></div><p>Custom orders for groups that want a consistent look and a straightforward experience from enquiry to delivery.</p></div>
-      <div class="services"><div class="service-list">
-        <div class="service-row"><span>Colleges & student communities</span><span>↗</span></div><div class="service-row"><span>Festivals & event organisers</span><span>↗</span></div><div class="service-row"><span>Gyms, clubs & sports teams</span><span>↗</span></div><div class="service-row"><span>Companies & work teams</span><span>↗</span></div><div class="service-row"><span>Creators & communities</span><span>↗</span></div>
-      </div><div><p class="eyebrow">YOUR BRIEF, OUR PROCESS</p><p style="font:500 25px/1.4 'Manrope',sans-serif;letter-spacing:-.04em;margin:0 0 18px">From one clear idea to a coordinated order.</p><p style="color:#aaa;font-size:13px;line-height:1.9;margin:0">Tell us what you have in mind, who it's for, and when you need it. We'll help shape the product options, artwork and order details before production begins.</p></div></div>
-    </section>
-    <section id="process" class="wrap">
-      <div class="section-head"><div><p class="eyebrow">04 / How it works</p><h2>Clear from<br>start to finish.</h2></div><p>Every project is handled with clear communication and approval at the important stages.</p></div>
-      <div class="process">
-        <div class="step"><b>STEP 01</b><h3>Tell us</h3><p>Share your product, quantity, artwork, sizes and deadline.</p></div>
-        <div class="step"><b>STEP 02</b><h3>Plan it</h3><p>We discuss suitable options and provide a quotation for your order.</p></div>
-        <div class="step"><b>STEP 03</b><h3>Approve</h3><p>Review the design and order details before production starts.</p></div>
-        <div class="step"><b>STEP 04</b><h3>Receive</h3><p>Your approved custom order is prepared and delivered as agreed.</p></div>
+
+    <div class="marquee" aria-label="Custom apparel, made to order"><div>YOUR IDEA <b>✳</b> YOUR PEOPLE <b>✳</b> YOUR IDENTITY <b>✳</b> MADE TO ORDER <b>✳</b> YOUR IDEA <b>✳</b> YOUR PEOPLE <b>✳</b> YOUR IDENTITY <b>✳</b> MADE TO ORDER <b>✳</b></div></div>
+
+    <section class="collections section-pad" id="collections">
+      <div class="section-intro"><p class="eyebrow">01 / WHAT WE MAKE</p><h2>Good things<br>get <em>worn.</em></h2><p class="intro-note">A considered range of custom-made apparel and merchandise. Built around your brief, not off-the-shelf branding.</p></div>
+      <div class="collection-grid">
+        <a class="collection-card card-tee" href="#enquire"><span class="card-number">01 — APPAREL</span><div class="product-art art-tee"><span>AVEN<br><small>STUDIO EDITION</small></span></div><div class="card-caption"><div><h3>T-shirts</h3><p>Classic / Oversized / Printed</p></div><b>↗</b></div></a>
+        <a class="collection-card card-hoodie" href="#enquire"><span class="card-number">02 — LAYERS</span><div class="product-art art-hoodie"><span>YOUR<br>CREW.</span></div><div class="card-caption"><div><h3>Hoodies & sweatshirts</h3><p>Everyday / Heavyweight / Custom</p></div><b>↗</b></div></a>
+        <a class="collection-card card-polo" href="#enquire"><span class="card-number">03 — UNIFORM</span><div class="product-art art-polo"><span>A / TEAM</span></div><div class="card-caption"><div><h3>Polos & uniforms</h3><p>Workwear / Clubs / Teams</p></div><b>↗</b></div></a>
+        <a class="collection-card card-jersey" href="#enquire"><span class="card-number">04 — TEAMWEAR</span><div class="product-art art-jersey"><span>PLAY<br>AS ONE.</span></div><div class="card-caption"><div><h3>Jerseys & sportswear</h3><p>Match day / Training / Clubs</p></div><b>↗</b></div></a>
+        <a class="collection-card card-objects" href="#enquire"><span class="card-number">05 — OBJECTS</span><div class="object-art"><div class="tote">A.</div><div class="bottle"></div><div class="cap">A</div></div><div class="card-caption"><div><h3>Everyday merchandise</h3><p>Totes / Bottles / Caps / More</p></div><b>↗</b></div></a>
       </div>
     </section>
-    <section class="wrap" id="contact">
-      <div class="contact"><div><p class="eyebrow">05 / Start a conversation</p><h2>Have an idea?<br>Let's make it real.</h2><p>Tell us what you're looking to create. Share your quantity, product and timeline, and we'll get back to you.</p></div><a class="button primary" href="mailto:atharvakale.co@gmail.com?subject=AVEN%20Custom%20Order%20Enquiry">Enquire with AVEN ↗</a></div>
+
+    <section class="manifesto" id="studio">
+      <div class="manifesto-mark">A<span>/</span></div>
+      <div class="manifesto-content"><p class="eyebrow">02 / A LITTLE ABOUT US</p><h2>Not another<br>logo on a tee.<br><em>A reason to<br>wear it.</em></h2><div class="manifesto-foot"><p>AVEN works with people building something together — a college community, a team, a business or an event. We help turn that shared identity into apparel and merchandise people actually want to keep.</p><span>BUILT AROUND YOUR BRIEF — EST. 2026</span></div></div>
+    </section>
+
+    <section class="for-who section-pad">
+      <div class="section-intro"><p class="eyebrow">03 / WHO IT'S FOR</p><h2>One idea.<br><em>Many uniforms.</em></h2></div>
+      <div class="audience-list"><div><span>01</span><h3>Campus & college communities</h3><b>↗</b></div><div><span>02</span><h3>Festivals & event organisers</h3><b>↗</b></div><div><span>03</span><h3>Gyms, clubs & sports teams</h3><b>↗</b></div><div><span>04</span><h3>Companies & work teams</h3><b>↗</b></div><div><span>05</span><h3>Creators & communities</h3><b>↗</b></div></div>
+    </section>
+
+    <section class="process-section section-pad" id="process">
+      <div class="process-heading"><p class="eyebrow">04 / THE PROCESS</p><h2>Simple by<br><em>design.</em></h2><p>Good work starts with a clear brief. Here's how we take it forward.</p></div>
+      <div class="process-steps"><article><span>01</span><h3>Tell us the idea.</h3><p>Product, quantity, sizes, artwork and the date you need it.</p></article><article><span>02</span><h3>We work it out.</h3><p>We discuss options, timelines and send a clear quotation.</p></article><article><span>03</span><h3>Approve the details.</h3><p>Artwork and order specifications are confirmed before production.</p></article><article><span>04</span><h3>Made. Checked. Sent.</h3><p>Your custom order is prepared and delivered as agreed.</p></article></div>
+    </section>
+
+    <section class="enquiry" id="enquire">
+      <div class="enquiry-top"><p class="eyebrow">05 / HAVE SOMETHING IN MIND?</p><span>LET'S TALK ↘</span></div>
+      <h2>Let's make<br><em>your thing.</em></h2>
+      <p class="enquiry-copy">Tell us what you're putting together. We'll take it from there.</p>
+      <form class="enquiry-form" id="enquiry-form">
+        <label>Your name<input name="name" required placeholder="Name"></label>
+        <label>What do you need?<select name="product" required><option value="">Choose a product</option><option>T-shirts</option><option>Hoodies / Sweatshirts</option><option>Polos / Uniforms</option><option>Jerseys / Sportswear</option><option>Custom merchandise</option><option>Something else</option></select></label>
+        <label>Approx. quantity<input name="quantity" inputmode="numeric" placeholder="e.g. 50 pieces"></label>
+        <label>Tell us a little more<textarea name="details" rows="2" placeholder="Your idea, sizes, deadline..."></textarea></label>
+        <button type="submit">Send an enquiry <span>↗</span></button>
+      </form>
+      <p class="direct-mail">Rather email? <a href="mailto:atharvakale.co@gmail.com">atharvakale.co@gmail.com ↗</a></p>
     </section>
   </main>
-  <footer class="wrap"><a class="wordmark" href="#">AVEN<small>CUSTOM APPAREL & MERCHANDISE</small></a><span>© <span id="year"></span> AVEN. Made with intent.</span><div class="footer-links"><a href="#products">Products</a><a href="#services">Services</a><a href="mailto:atharvakale.co@gmail.com">Email</a></div></footer>
-  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+  <footer class="site-footer"><a class="footer-brand" href="#">AVEN<span>APPAREL & OBJECTS</span></a><p>Custom apparel & merchandise.<br>Made to order in India.</p><div class="footer-links"><a href="#collections">Collections</a><a href="#studio">Studio</a><a href="#enquire">Enquiries</a></div><small>© <span id="year"></span> AVEN. ALL RIGHTS RESERVED.</small></footer>
+  <script src="script.js"></script>
 </body>
 </html>
