@@ -56,5 +56,5 @@ document.querySelector('#enquiry-form')?.addEventListener('submit',event=>{
     '\nQuantity: '+(data.get('quantity')||'Not specified')+
     '\nRequired by: '+(data.get('deadline')||'Not specified')+
     '\nDetails: '+(data.get('details')||'Not specified');
-  window.location.href='https://wa.me/message/6VS3Z3TLWHE4F1?text='+encodeURIComponent(message);
+  window.location.href='https://wa.me/919403677996?text='+encodeURIComponent(message);
 });
