@@ -48,14 +48,13 @@ document.querySelector('#enquiry-form')?.addEventListener('submit',event=>{
   const contact=(data.get('contact')||'').toString().trim();
   const product=(data.get('product')||'').toString();
   if(!name||!contact||!product){return;}
-  const subject=encodeURIComponent('AVEN project enquiry — '+product);
-  const body=encodeURIComponent(
+  const message=
+    'Hello AVEN! I would like to send a project enquiry.\n\n'+
     'Name: '+name+
     '\nEmail / Phone: '+contact+
     '\nProject: '+product+
     '\nQuantity: '+(data.get('quantity')||'Not specified')+
     '\nRequired by: '+(data.get('deadline')||'Not specified')+
-    '\nDetails: '+(data.get('details')||'Not specified')
-  );
-  window.location.href='mailto:atharvakale.co@gmail.com?subject='+subject+'&body='+body;
+    '\nDetails: '+(data.get('details')||'Not specified');
+  window.location.href='https://wa.me/message/6VS3Z3TLWHE4F1?text='+encodeURIComponent(message);
 });
